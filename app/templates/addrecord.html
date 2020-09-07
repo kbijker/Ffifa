@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<html>
+    <head>
+          <h1>  Kies welke records je wilt toevoegen:</h1>
+          
+    </head>
+    <body>
+        <form method="post" action="" novalidate>
+
+            <p>
+                {{ form.choice.label }}<br>
+                {{ form.choice }}
+            </p>
+            <p>{{ form.submit() }}</p>
+           
+        </form>
+    </body>
+</html>
+
+{% endblock %}

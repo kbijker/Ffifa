@@ -1,0 +1,29 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Fifa DB</title>
+      {% else %}
+      <title>Welkom bij Eredivisie spel van Bijker</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Teammanager: <a href="/index">Home</a></div>
+        <hr>
+        <h1>Hello, {{ username }}!</h1>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
+
+
+<div>
+    
+    <a href="/index">Home</a>
+    <a href="/login">Login</a>
+    <a href="/register">Registeer</a>
+    <a href="/profile">Profiel aanpassen</a>
+    <a href="/showTable">Toon Tabel:</a>
+    <a href="/newplayerteam">Nieuw team samenstellen:</a>
+    <a href="/admin">Administratief werk:</a>
+    
+</div>

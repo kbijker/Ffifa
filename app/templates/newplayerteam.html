@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Vul je nieuwe team in:</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.naam.label }}<br>
+            {{ form.naam(size=32) }}
+        </p>
+        
+        <p>
+            {{ form.player1.label }}<br>
+            {{ form.player1 }}
+        </p>
+        <p>
+            {{ form.player2.label }}<br>
+            {{ form.player2 }}
+        </p>
+        <p>
+            {{ form.player3.label }}<br>
+            {{ form.player3 }}
+        </p>
+        <p>
+            {{ form.player4.label }}<br>
+            {{ form.player4 }}
+        </p>
+        <p>
+            {{ form.player5.label }}<br>
+            {{ form.player5 }}
+        </p>
+        <p>
+            {{ form.player6.label }}<br>
+            {{ form.player6 }}
+        </p>
+        <p>
+            {{ form.player7.label }}<br>
+            {{ form.player7 }}
+        </p>
+        
+        <p>{{ form.submit() }}</p>
+        <p>{{ feedback}}</p>
+    </form>
+{% endblock %}

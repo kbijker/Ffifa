@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Fifa DB</title>
+      {% else %}
+      <title>Administratief werk</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Teammanager: <a href="/index">Home</a></div>
+        <hr>
+        <h1>Hallo, {{ username }}!</h1>
+        <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.userchoice.label }}<br>
+            {{ form.userchoice }}
+        </p>
+        <p>
+            {{ form.rechten.label }}<br>
+            {{ form.rechten}}
+        </p>
+        <p>
+            {{ form.actie.label }}<br>
+            {{ form.actie }}
+        </p>
+        
+        <p>{{ form.submit() }}</p>
+        <p>
+            Team:{{ teamselection }} <br>
+        </p>
+        <p>{{ feedback}}</p>
+
+
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
+
+
+<div>
+    
+    <a href="/index">Home</a>
+    <a href="/addrecord">Invoer Records</a>
+    <a href="/showTable">Toon Tabel:</a>
+    <a href="/deleterecords">Records verwijderen:</a>
+    <a href="/newplayerteam">Nieuw team samenstellen:</a>
+    <a href="/users">Onderhoud gebruikers (users):</a>
+</div>
